@@ -1,0 +1,26 @@
+{
+    "description": "Unofficial addon for copying recipes from websites to CopyMeThat.",
+    "manifest_version": 2,
+    "name": "unofficial-copymethat",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content_scripts/copy.js"]
+        }
+    ],
+
+    "background": {
+        "scripts": ["background_scripts/background.js"]
+    },
+
+    "browser_action": {
+        "browser_style": true,
+        "default_icon": "icons/copymethat.png"
+    },
+
+    "permissions": [
+        "activeTab",
+        "<all_urls>"
+    ]
+}
